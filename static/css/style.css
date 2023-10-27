@@ -1,0 +1,160 @@
+:root{
+    --dark-blue:rgba(24, 44, 97,1.0);
+    --yellow:#eab543;
+}
+*{
+    text-decoration: none !important;
+}
+.text-yellow{
+    color: #eab543 !important;
+}
+.navbar{
+    background-color: var(--dark-blue);
+    /* height: 10vh !important; */
+}
+.blog-search-btn{
+    border: 1px solid var(--yellow);
+    color: white;
+}
+.blog-search-btn:hover{
+    background-color: var(--yellow);
+}
+.navbar .nav-link{
+    font-size: 1.2rem;
+    padding-inline: 1rem !important;
+}
+.navbar .nav-link.active{
+    color: var(--yellow) !important;
+    text-decoration: underline;
+}
+.navbar .nav-link:hover{
+    color: var(--yellow) !important;
+    text-decoration: underline;
+}
+.navbar .navbar-nav .dropdown .dropdown-menu .dropdown-item:focus{
+    background-color: #eab543 !important;
+}
+.search-box input{
+    background-color: transparent;
+    color: #fff !important;
+    outline: none !important;
+    border: none !important;
+    border-bottom: 1px solid #fff !important;
+}
+.search-box input:focus{
+    background-color: transparent;
+    outline: none;
+}
+ion-icon[name="search-outline"]{
+    border-bottom: 1px solid #fff;
+    padding-bottom: 3px;
+    font-size: 1.3rem;
+}
+/* @media (max-width: 576px) { 
+    
+}
+@media (max-width: 768px) { ... }
+
+@media (max-width: 992px) { ... } */
+
+@media (max-width: 1200px) { .navbar .container{
+    background-color: var(--dark-blue);
+} }
+
+@media (min-width: 1400px) {
+    
+}
+
+/* hero section  */
+#hero{
+    height: 90vh;
+    width: 100%;
+    background-image: url("https://www.smartbugmedia.com/hubfs/Blog_Images/Blogging/Write%203-5%20Blog%20Posts%20a%20Week%20Even%20If%20You%20are%20Just%20One%20Person.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#hero .hero__inner{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.hero__inner-content{
+    width: 50%;
+}
+.button{
+    border: 1px solid var(--yellow);
+    margin-right: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.button:hover{
+    background-color: var(--yellow);
+}
+
+/* Blogs Section */
+.blogs{
+    height: min-content;
+    padding: 2rem;
+    width: 100%;
+    position: relative;
+}
+.blog__inner{
+    gap: 2rem !important;
+    /* height: 70vh !important; */
+}
+.blogs .blog .card-link{
+    color: var(--yellow);
+}
+.blogs .blog .card-link:hover{
+    text-decoration: underline !important;
+}
+
+/* Login Section  */
+#login{
+    height: 90vh;
+}
+#login input[type="text"],
+#login input[type="email"],
+#login input[type="password"]{
+    width: 300px !important;
+}
+#join{
+    height: 90vh;
+}
+#join input[type="text"],
+#join input[type="email"],
+#join input[type="password"]{
+    width: 300px !important;
+}
+
+.dashboard__sidemenu{
+    border-right: 1px solid #000;
+}
+.description {
+    margin-bottom: 1rem; 
+}
+.description_1 {
+    height: 4em; /* Set the initial height */
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.read-less {
+    display: none; /* Initially hide the "Read Less" link */
+}
+
+
+.footer {
+    --dark-blue:rgba(24, 44, 97,1.0);
+   
+  }
+  

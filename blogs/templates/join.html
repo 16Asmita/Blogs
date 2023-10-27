@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="position-relative d-flex align-items-center" id="join">
+  <div class="container">
+    <div class="login__inner d-flex rounded w-100 shadow-sm p-5">
+      <div class="login__form w-50 d-flex align-items-center ps-5">
+        <form class="d-flex flex-column gap-3" action="{% url 'join_save' %}" method="post">
+          {% csrf_token %}
+          <div class="login__form-title">
+            <h3 class="text-yellow fw-bold">Welcome,</h3>
+            <p>Create a free account</p>
+          </div>
+          <div class="login__form__input">
+            <div class="mb-3">
+              <label for="newUserName" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="newUserName" name="yourname" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginUsername" class="form-label">Username</label>
+              <input type="email" class="form-control" id="loginUsername" name="username">
+              {% if messages %}
+              {% for message in messages %}
+              <span class="message text-danger">
+                {{ message }}
+              </span>
+              {% endfor %}
+              {% endif %}
+            </div>
+            <div class="mb-4">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="loginPassword" name="password" required>
+            </div>
+            <button type="submit" class="btn button">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="login__image w-50 pe-5">
+        <img class="img-fluid" src="/static/image/join-image.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

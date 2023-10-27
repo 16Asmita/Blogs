@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="blogs container d-flex flex-wrap">
+    {% for message in messages %}
+    <div class="alert alert-success d-flex align-items-center" role="alert">
+        <strong>Hey!</strong> {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% for blo in blog %}
+    <div class="blog__inner d-flex flex-wrap justify-content-center m-1">
+        <div class="card blog" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title mb-2">{{blo.title}}</h5>
+                <p class="card-text mb-4">{{blo.description}}</p>
+                <a href="{% url 'blog_details' blo.id %}" class="card-link text-decoration-none">Read More</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+<div class="text-center mt-3">
+    <button class="btn btn-outline-warning px-5 py-2" type="submit">
+        <a class="text-dark" href="{% url 'all_blogs' %}">
+            All Blogs
+        </a>
+    </button>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="login__inner d-flex rounded container shadow-sm p-5">
+
+    <div class="blog__inner d-flex  m-3">
+        <div class="card blog  align-self-start">
+            <div class="card-body text-center">
+                <h4 class="card-title mb-2">{{blog.title}}</h4>
+                <p class="card-text mb-4">{{blog.description}}</p>
+            </div>
+        </div>
+        <div class="login__image ">
+            <img class="img-fluid" src="/static/image/blog_img.png" alt="">
+          </div>
+    </div>
+    
+</div>
+{% endblock %}
+

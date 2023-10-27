@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="https://img.freepik.com/free-photo/toy-bricks-table-with-word-blog_144627-47465.jpg?w=1380&t=st=1696419394~exp=1696419994~hmac=d0c281772a0b29c1aceecdeeb25ab290a7e7133f9f1e4ce851bc2a50e3a864b2" type="image/x-icon">
+    <!-- Bootstarp cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- custome css link -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Blogo</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg z-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 ml-auto mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light active" aria-current="page" href="/"><ion-icon name="home-outline"></ion-icon> Home</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link text-light dropdown-toggle" href="/blogs" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Blogs
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                              <li><a class="dropdown-item" href="/dashboard">Add Blogs</a></li>
+                            </ul>
+                          </li> -->
+                          <li class="nav-item">
+                            <a class="nav-link text-light" href="/blogs"><ion-icon name="book-outline"></ion-icon> Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/join">Sign Up</a>
+                        </li>
+                    </ul>
+                    <form method="post" class="d-flex search-box align-items-end" role="search">
+                        {% csrf_token %}
+                        <ion-icon class="text-light" name="search-outline"></ion-icon>
+                        <input class="px-1 me-2" type="text" name="search" placeholder="Search Blogs">
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer">
+        <div class="container p-3 text-center">
+            <p class="text-dark  fw-bolder"><sup>&copy;</sup>All Right Reserves AV Blogs</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="/static/js/index.js"></script>
+</body>
+
+</html>
